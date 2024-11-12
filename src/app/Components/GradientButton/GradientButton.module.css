@@ -1,0 +1,14 @@
+.gradientBtn {
+    background: var(--homeMainBtn);
+    padding: 10px 24px;
+    color: var(--textClr);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.gradientBtn:hover {
+    background: var(--homeCardGradient);
+}

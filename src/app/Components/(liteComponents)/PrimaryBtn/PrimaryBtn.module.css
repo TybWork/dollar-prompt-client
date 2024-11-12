@@ -1,0 +1,19 @@
+.btns {
+    padding: 8px 16px;
+    width: 118px;
+    height: 32px;
+    background-color: var(--homeMainBtn);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: linear;
+    text-decoration: none;
+    text-align: center;
+    color: var(--homePrimaryClr);
+}
+
+.btns:hover {
+    background: var(--homeCardGradient);
+}

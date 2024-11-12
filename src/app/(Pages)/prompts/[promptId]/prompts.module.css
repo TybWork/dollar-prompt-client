@@ -1,0 +1,84 @@
+.mainContainer {
+    display: flex;
+    padding: var(--mainPadding);
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.profileInfo {
+    max-width: 750px;
+}
+
+.sellerDescription {
+    font-size: 14px;
+    color: var(--homeTertiaryClr);
+    padding-bottom: 32px;
+    max-width: 628px;
+}
+
+.sellerDescription a {
+    color: var(--homeTertiaryClr);
+    text-transform: capitalize;
+}
+
+
+/* ..........right section.......... */
+.promptDetail {
+    width: 548px;
+    height: 609px;
+    padding: 40px;
+    border-radius: 8px;
+    background: var(--homeTertiaryClr);
+}
+
+.promptImages {
+    width: 100%;
+    display: flex;
+
+}
+
+.img {
+    flex: 1;
+
+}
+
+.adaptive {
+    /* flex: 1; */
+}
+
+.promptSlider {
+    padding: var(--mainPadding);
+}
+
+/* media queries */
+@media screen and (max-width:1024px) {
+    .mainContainer {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    .profileInfo {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mainContainer {
+        padding: 24px;
+    }
+
+    .promptSlider {
+        padding: 24px;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+    .mainContainer {
+        padding: 12px;
+    }
+
+    .promptSlider {
+        padding: 36px 12px;
+    }
+}

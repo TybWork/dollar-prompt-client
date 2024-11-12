@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+:root {
+
+  /* --primaryClr: #0b1e0d;
+  --secondryClr: #102e13;
+  --tertiaryClr: #153d19;
+  --messageBg: #2C502F;
+  --timeClr: #97ff7f; */
+
+  --primaryClr: #080908;
+  --secondryClr: #061208;
+  --tertiaryClr: #0f2c12;
+  --messageBg: #2C502F;
+  --timeClr: #97ff7f;
+
+  --buttonGradient: linear-gradient(122deg, #1B1D5E, #44C151);
+  --activeClr: rgb(45, 151, 19);
+
+  --customBorder: #44c1507a;
+
+  --textClr: rgb(255, 255, 255);
+  --buttonGradientHover: linear-gradient(122deg, #44C151, #1B1D5E);
+
+
+  /* new colors */
+  --homePrimaryClr: #ffffff;
+  --homeSecondryClr: #F8FDF8;
+  --homeTertiaryClr: #205B26;
+  --homeMainBtn: #44C151;
+  --homeIconClr: #8FAD92;
+  --homeCardBorder: #D2DED4;
+  --homeIconText: #D9D9D9;
+  --blackClr: #000000;
+  --ratingColor: #B5C8B7;
+  --homeBorderClr: #D6EDD9;
+  --infoCardClr: #F6FFF7;
+  --ratingClr: #FFE838;
+  --categoryClr: #102E13;
+  /* new cardGradient */
+  --homeCardGradient: linear-gradient(90deg, rgba(5, 236, 28, 1) 0%, rgba(20, 156, 34, 1) 33%, rgba(5, 236, 28, 1) 77%, rgba(20, 156, 34, 1) 100%);
+  --boxShadow: 0px 5px 8px rgba(32, 91, 38, 0.08);
+
+  /* utilities */
+  --mainPadding: 48px;
+
+  /* text styles */
+  --logo: 2rem;
+  --navLinks: 16px;
+  --bottomLinks: 12px;
+
+  /* others */
+  --transition: .3s;
+}
+
+/* breakpoints */
+/* 1024px
+658px */
+
+body {
+  margin: auto;
+  width: 100%;
+  max-width: 1440px;
+  font-family: mainFont;
+  font-family: var(--primaryFont);
+  background-color: var(--homePrimaryClr);
+  /* background-color: var(--primaryClr); */
+  color: var(--textClr);
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+  background-color: var(--tertiaryClr);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(122deg, var(--tertiaryClr), #44C151);
+  border-radius: 5px;
+}
+
+.select {
+  background-color: var(--homePrimaryClrl);
+  width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 8px;
+  color: var(--homeTertiaryClr);
+  border: 2px solid var(--homeMainBtn);
+}
+
+@keyframes timelineAnim {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ....................jodit editor..............  */
+
+/* .jodit-container *{
+  background: var(--tertiaryClr) !important;
+} */
+
+/* content background  */
+.jodit-container:not(.jodit_inline) .jodit-workplace {
+  background: var(--homePrimaryClr) !important;
+  color: var(--homeTertiaryClr);
+  height: max-content !important;
+  min-height: 300px !important;
+}
+
+/* header of jodit container */
+.jodit-ui-group {
+  padding: 8px !important;
+  row-gap: 8px !important;
+  column-gap: 2px !important;
+  background: var(--homeMainBtn) !important;
+}
+
+/* jodit icons color  */
+.jodit-toolbar-button .jodit-icon {
+  fill: var(--homePrimaryClr) !important;
+}
+
+.jodit-container:not(.jodit_inline) {
+  border: none !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background: var(--transparent) !important;
+  height: 100% !important;
+  box-shadow: 0px 3px 5px rgba(0, 80, 17, 0.377) !important;
+}
+
+/* content box onclick styling .....  */
+.jodit-popup__content {
+  background: var(--buttonGradientHover) !important;
+  border-radius: 8px !important;
+  margin-top: 16px !important;
+}
+
+/* triggers icons  */
+.jodit-toolbar-button__trigger svg {
+  width: calc(14px - 2px);
+  fill: var(--timeClr) !important;
+}
+
+
+.jodit-toolbar__box:not(:empty):not(:empty) {
+  background: transparent !important;
+}
+
+/* jodit break fetur hide */
+
+td {
+  /* border-collapse: separate; */
+  border: 1px solid;
+}
+
+
+/*............. jodit footer.......... */
+
+/* jodit text  */
+.jodit-status-bar a.jodit-status-bar-link {
+  display: none !important;
+}
+
+.jodit-workplace+.jodit-status-bar:not(:empty) {
+  border-top: 1px solid var(--customBorder) !important;
+  color: var(--textClr);
+  background: var(--homeMainBtn);
+}
+
+/* remove size button  */
+.jodit-container:not(.jodit_inline) .jodit-editor__resize svg {
+  display: none !important;
+}

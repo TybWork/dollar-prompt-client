@@ -1,0 +1,30 @@
+.container {
+    font-size: 24px;
+    color: var(--homePrimaryClr);
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.counter {
+    font-size: 8px;
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.icon {
+    color: var(--homeMainBtn);
+    font-size: 24px;
+}
+
+.container:hover .counter {
+    transform: scale(1.2);
+}

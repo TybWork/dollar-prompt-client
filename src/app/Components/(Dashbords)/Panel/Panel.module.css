@@ -1,0 +1,113 @@
+.parentContainer {
+    display: flex;
+    gap: 24px;
+}
+
+/*........... left tab styling .......... */
+.leftSettingsTab {
+    background: var(--homeTertiaryClr);
+    width: 300px;
+    padding: 16px 24px;
+    border: 1px solid var(--homeCardBorder);
+    box-shadow: var(--boxShadow);
+    border-radius: 4px;
+    height: max-content;
+    position: sticky;
+    top: 0;
+}
+
+.logoContainer {
+    height: 69px;
+    border-bottom: 1px solid var(--customBorder);
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.siteLogo {
+    width: 140px;
+    height: auto;
+    padding-bottom: 16px;
+}
+
+.profileLogo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+}
+
+.btnContainer {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    height: calc(100vh - 320px);
+    overflow-y: auto;
+}
+
+.btnContainer::-webkit-scrollbar {
+    width: 4px;
+}
+
+.btnContainer:hover::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.226);
+}
+
+.btnContainer:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 243, 32, 0.466);
+}
+
+.border {
+    border: none;
+    border-bottom: 1px solid var(--customBorder);
+    margin: 16px 0px;
+}
+
+.illustration {
+    width: 57%;
+    text-align: center;
+    align-self: center;
+    height: auto;
+    display: block;
+    margin: 16px auto;
+}
+
+/* mobileTabBtns */
+.mobileTabBtns {
+    display: none;
+}
+
+/* ......right detail tab....... */
+.rightDetailTab {
+    flex: 1;
+    overflow-y: auto;
+    overflow: hidden;
+    background: var(--homePrimaryClr);
+    color: var(--homeMainBtn);
+    box-shadow: var(--boxShadow);
+    border: 1px solid var(--homeCardBorder);
+    border-radius: 4px;
+    padding: 24px;
+}
+
+@media screen and (max-width:1024px) {
+    .leftSettingsTab {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .parentContainer {
+        flex-direction: column;
+    }
+
+    .leftSettingsTab {
+        display: none;
+    }
+
+    .mobileTabBtns {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+}

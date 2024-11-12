@@ -1,0 +1,80 @@
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.gradientDivLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 100%;
+    background: linear-gradient(to right, var(--homeSecondryClr) 42%, rgb(248, 253, 248, 0.20) 100%);
+    z-index: 1;
+}
+
+.gradientDivRight {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 1;
+    width: 48px;
+    height: 100%;
+    background: linear-gradient(to left, var(--homeSecondryClr) 42%, rgb(248, 253, 248, 0.20) 100%);
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: var(homeSecondryClr);
+    text-align: center;
+    color: black;
+    display: flex;
+    overflow: hidden;
+}
+
+.dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #D9D9D9;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #205B26;
+}
+
+@media screen and (max-width:768px) {
+    .slide {
+        overflow: scroll;
+        padding: 20px 0px;
+    }
+
+    .slide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gradientDivLeft {
+        width: 18px;
+    }
+
+    .gradientDivRight {
+        width: 18px;
+    }
+}

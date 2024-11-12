@@ -1,0 +1,19 @@
+.input {
+    background: var(--homePrimaryClr);
+    outline: none;
+    border: none;
+    color: var(--homeMainBtn);
+    padding: 8px;
+    margin: 0px 4px;
+    border-radius: 8px;
+    border: 2px solid var(--homeMainBtn);
+}
+
+.input::placeholder {
+    color: var(--textClr);
+    opacity: .7;
+}
+
+.input:focus {
+    outline: 3px solid var(--homeMainBtn);
+}

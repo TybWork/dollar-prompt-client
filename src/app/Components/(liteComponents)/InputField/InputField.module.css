@@ -1,0 +1,19 @@
+.inputField {
+    background: var(--homePrimaryClr);
+    border: none;
+    outline: none;
+    color: var(--homeTertiaryClr);
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+    border: 2px solid var(--homeMainBtn);
+}
+
+.inputField:focus {
+    outline: 2px solid var(--homeMainBtn);
+}
+
+.inputField::placeholder {
+    color: var(--homeTertiaryClr);
+    opacity: .6;
+}

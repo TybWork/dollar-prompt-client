@@ -1,0 +1,183 @@
+.mainContainer {
+    width: 306px;
+    height: 324px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+}
+
+.coloredContainer {
+    background-image: conic-gradient(from -45deg, transparent 80%, rgba(5, 236, 28, 1), rgba(20, 156, 34, 1) 97%);
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    position: absolute;
+    transition: 1.8s;
+    transform-origin: center;
+    animation: none;
+    opacity: 0;
+}
+
+.innerContentContainer {
+    z-index: 132;
+    width: 300px;
+    height: 318px;
+    padding: 12px 8px;
+    border-radius: 8px;
+    background: var(--homePrimaryClr);
+    border: 1px solid var(--homeCardBorder);
+    color: var(--homeTertiaryClr);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* options preview fro seller */
+.optionsPannel {
+    position: absolute;
+    top: -100%;
+    left: 0px;
+    background: radial-gradient(var(--homePrimaryClr), rgb(221, 146, 146));
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: var(--homeMainBtn);
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    transition: top .3s;
+}
+
+.optionsPannel svg {
+    cursor: pointer;
+}
+
+.optionsPannel svg:hover .optionsPannel {
+    background: green;
+}
+
+.optionsPannel a {
+    color: var(--homeMainBtn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.iconBg {
+    background: linear-gradient(rgb(97, 0, 0), rgb(136, 0, 0));
+    color: var(--homePrimaryClr);
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+.category {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: var(--categoryClr);
+    color: var(--homePrimaryClr);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.mainContainer:hover .coloredContainer {
+    animation: anim 3.4s linear infinite;
+
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+.image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0px;
+    gap: 8px;
+}
+
+.header {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    text-align: left;
+    font-family: var(--secondryFont);
+    font-weight: 600;
+}
+
+.hr {
+    background: #F3F9F4;
+    height: 1px;
+    width: 100%;
+    outline: none;
+    border: none;
+    margin-top: 12px;
+}
+
+/* cardfooter */
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconText {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    color: var(--homeIconText);
+}
+
+.shareIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shareIcon span:not(.shareIcon span:nth-child(3)) {
+    color: var(--ratingClr);
+}
+
+.hideOption:hover {
+    color: red;
+}
