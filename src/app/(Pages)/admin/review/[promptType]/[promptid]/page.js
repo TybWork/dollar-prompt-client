@@ -38,15 +38,10 @@ const Page = ({ params }) => {
   }, [promptid]);
   if (!promptData) return <Loading />;
 
-  const updateStatus = async (e) => {
-    const target = e.target.innerText;
-    const newStatus = target === "Approve" ? "active" : "paused";
-    setstatus(newStatus);
+  const updateStatus = async (promptStatus) => {
     await axios.put(
-      // `${process.env.NEXT_PUBLIC_SERVER_URL}/api/admin/dalle/update/${promptid}`,
-      // { status: status },
       `${process.env.NEXT_PUBLIC_SERVER_URL}/api/admin/prompt-status/update?promptType=${promptType}&id=${promptid}`,
-      { status: status },
+      { status: promptStatus },
       {
         headers: {
           Authorization: getTokenFunction().token,
@@ -244,11 +239,10 @@ const Page = ({ params }) => {
           </div>
         </div>
 
-
         {/*.................. buttons ........................*/}
         <div className={styles.btnContainer}>
-          <GradientButton title="Approve" onClick={updateStatus} />
-          <GradientButton title="Reject" onClick={updateStatus} />
+          <GradientButton title="Approve" onClick={() => updateStatus('active')} />
+          <GradientButton title="Reject" onClick={() => updateStatus('paused')} />
         </div>
       </div>
 
